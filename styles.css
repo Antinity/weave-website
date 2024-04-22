@@ -8,11 +8,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+img {
+  max-width: 100% !important;
+}
   
 body, button {
   padding: 20px 20px 20px 20px;
   /* cursor: none; */
   color: white;
+}
+
+.navbar {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  width: 100%;
 }
 
 a {
@@ -53,6 +71,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-primary {
@@ -108,7 +131,7 @@ h1 span {
   border-radius: 10px;
   border: 1.5px solid rgba(255, 255, 255, 0.15); 
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
 }
 
@@ -144,7 +167,7 @@ h1 span {
   border-radius: 10px;
   border: 1.5px solid rgba(255, 255, 255, 0.15); 
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
 }
 
@@ -184,7 +207,7 @@ h1 span {
   border-radius: 10px;
   border: 1.5px solid rgba(255, 255, 255, 0.15); 
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   font-size: 18px;
 }
@@ -204,25 +227,25 @@ h1 span {
 }
 
 .table th {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   color: white;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .table td {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   color: white;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .table tr:nth-child(even) {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .table tr:nth-child(odd) {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 /* FAQ */
@@ -243,7 +266,7 @@ h1 span {
   border-radius: 10px;
   border: 1.5px solid rgba(255, 255, 255, 0.15); 
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
 }
 
@@ -264,11 +287,12 @@ p span {
 
 footer {
   padding: 10px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-  border-radius: 10px;
   border: 1.5px solid rgba(255, 255, 255, 0.15);
   text-align: center;
+  width: 100%;
+  border-radius: 10px;
 }
 
 footer a {
@@ -293,7 +317,40 @@ footer img:hover {
 
 /* Mobile Optimizaiton */
 
+.navbar-nav {
+  margin-left: auto;
+}
+
 @media (max-width: 768px) {
+
+  body {
+    padding: 0;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: nowrap;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .nav-item {
+    margin: 10px;
+    min-width: 100px;
+  }
+
   .box {
     margin: 10px;
     padding: 10px;
@@ -321,4 +378,46 @@ footer img:hover {
   #support .container .col-md-6 {
     padding: 10px;
   }
+
+  #features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #features .container {
+    text-align: center !important;
+    font-size: 20px !important;
+    width: 90vw;
+  }
+
+  #faq .container {
+    text-align: center !important;
+    font-size: 20px !important;
+    width: 90vw;
+  }
+
+  #compatibility {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #compatibility .container  {
+    min-width: 90vw;
+  }
+
+  #compatibility h1 {
+    font-size: 32px;
+  }
+
 }
