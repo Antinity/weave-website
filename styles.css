@@ -66,16 +66,16 @@ button:hover {
 }
 
 body {
-  background: url('Assets/background.webp');
+  background: url('Assets/background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .button-primary {
