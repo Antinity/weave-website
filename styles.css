@@ -66,7 +66,7 @@ button:hover {
 }
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('Assets/background.png');
+  background: url('Assets/background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
